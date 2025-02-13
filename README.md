@@ -1,6 +1,6 @@
 # Kiryl Katselnikau  
 ## Bachelor of Computer Science | 2023 | Belarusian State University of Informatics and Radioelectronics (Faculty of Computer Systems and Networks)  
-Email: kiw197204@gmail.com  
+Email: **kiw197204@gmail.com**  
 Telegram: [@sdnuowsltsal](https://t.me/sdnuowsltsal)  
 ### Previous work experience  
 1. 2020 (half a year): php backend dev in BSUIR. Developed admin panel for educational web application
