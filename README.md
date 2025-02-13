@@ -11,6 +11,6 @@ Previous work experience:
 <details>
   <summary>Screenshot of successfully filled information fields in rs app profile</summary>
   
-   ![image](https://github.com/user-attachments/assets/9917e66f-d49a-44fd-8971-2be6207a3588)
+   <img src='https://github.com/user-attachments/assets/9917e66f-d49a-44fd-8971-2be6207a3588' alt='screen-error'/>
 
 </details>
