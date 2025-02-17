@@ -23,8 +23,10 @@ function createAutoComplete(data) {
         return
       }
       if (!node) return
-      node.children.get(str[0].toUpperCase()) && this._find(str.slice(1), node.children.get(str[0].toUpperCase()), finalnodes)
-      node.children.get(str[0].toLowerCase()) && this._find(str.slice(1), node.children.get(str[0].toLowerCase()), finalnodes)
+      node.children.get(str[0].toUpperCase()) &&
+        this._find(str.slice(1), node.children.get(str[0].toUpperCase()), finalnodes)
+      node.children.get(str[0].toLowerCase()) &&
+        this._find(str.slice(1), node.children.get(str[0].toLowerCase()), finalnodes)
       return finalnodes;
     }
 
@@ -54,12 +56,13 @@ function createAutoComplete(data) {
         while (stack.length) {
           const currentNode = stack.pop();
 
-          if (currentNode.value) matches.unshift(...new Array(currentNode.value.count).fill(currentNode.value.word))
+          if (currentNode.value) matches.push(...new Array(currentNode.value.count).fill(currentNode.value.word))
 
           const childNodes = currentNode.children.values()
           stack.push(...childNodes)
         }
       }
+      matches.reverse();
       return matches;
     }
   }
