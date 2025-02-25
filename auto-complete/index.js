@@ -46,7 +46,7 @@ function createAutoComplete(data) {
     }
 
     autocomplete(str) {
-      if (typeof str !== 'string' || str === '') return []
+      if (typeof str !== 'string' || !str) return []
       const nodes = this._find(str);
 
       const matches = [];
