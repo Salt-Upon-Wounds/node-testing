@@ -13,8 +13,9 @@ function createAutoComplete(data) {
 
     _trace(str, node = this.root) {
       if (!node) return
-      return this._trace(str.slice(1), str[0] && node.children.get(str[0]) || null) ||
-        { node, remainingString: str }
+      const nextStr = str.slice(1)
+      const nextNode = str[0] && node.children.get(str[0]) || null
+      return this._trace(nextStr, nextNode) || { node, remainingString: str }
     }
 
     _find(str, node = this.root, finalnodes = []) {
