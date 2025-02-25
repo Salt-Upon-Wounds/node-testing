@@ -23,10 +23,12 @@ function createAutoComplete(data) {
         return
       }
       if (!node) return
-      node.children.get(str[0].toUpperCase()) &&
+      if (node.children.get(str[0].toUpperCase())) {
         this._find(str.slice(1), node.children.get(str[0].toUpperCase()), finalnodes)
-      node.children.get(str[0].toLowerCase()) &&
+      }
+      if (node.children.get(str[0].toLowerCase())) {
         this._find(str.slice(1), node.children.get(str[0].toLowerCase()), finalnodes)
+      }
       return finalnodes
     }
 
